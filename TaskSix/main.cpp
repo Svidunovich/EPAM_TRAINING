@@ -48,8 +48,7 @@ int main(){
 	for(int i = 0; i < 5; i++){
 		std::cin >> str[i];
 	}	
-	std::string str2 = minStr(str);
-	std::cout << "Minimum line: " << str2 << std::endl; 
+	std::cout << "Minimum line: " << minStr(str) << std::endl; 
 	
 
 	int a, b;

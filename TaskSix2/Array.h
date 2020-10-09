@@ -17,7 +17,6 @@ class Array{
 
 template <typename T>
 Array<T>::Array(T array[], int size){
-	srand(time(NULL));
 	arr = new T[size];
 	_size = size;
 	for(int i = 0; i < _size; i++){

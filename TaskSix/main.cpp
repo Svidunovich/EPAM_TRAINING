@@ -22,8 +22,8 @@ T minStr(T(&array)[size]){
 
 template <typename T, int size>
 T minArray(T(&array)[size]){
-	for(int i = 0; i < 5; i++){
-		for(int j = 1 + i; j < 5; j++){
+	for(int i = 0; i < size; i++){
+		for(int j = 1 + i; j < size; j++){
 			if(array[i] > array[j]){
 				T temp = array[i];
 				array[i] = array[j];
@@ -44,6 +44,7 @@ T min(const T(&array)[size]){
 int main(){
 	srand(time(NULL));
 	
+	std::cout << "Enter the line: " << std::endl;
 	std::string str[5];		
 	for(int i = 0; i < 5; i++){
 		std::cin >> str[i];
@@ -51,6 +52,7 @@ int main(){
 	std::cout << "Minimum line: " << minStr(str) << std::endl; 
 	
 
+	std::cout << "Enter numbers: " << std::endl;
 	int a, b;
 	std::cin >> a >> b;
 	std::cout << "Minimum number: " << minNum(a, b) << std::endl;

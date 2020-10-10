@@ -16,6 +16,6 @@ class Array{
 		int getSize();
 		double getArr(int i, int j);
 		~Array();
+		friend void sumStr(Array &array);
 };
 
-void sumStr(Array &array);

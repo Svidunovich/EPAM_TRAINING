@@ -84,7 +84,7 @@ void setDataFile(std::vector<Text> &text)
 	for(int i = 0; i < text.size(); ++i)
 	{
 		std::stringstream dataName;
-		dataName << "datefile" << text[i]._number << ".txt";
+		dataName << "datafile" << text[i]._number << ".txt";
 		std::string name;
 		dataName >>  name;
 		if(fexists(name)){
@@ -110,7 +110,7 @@ void createDataFile(std::vector<Text> &text)
 	Text newMember;
 	text.push_back(newMember);
 	std::stringstream dataName;
-	dataName << "datefile" << text[text.size() - 1]._number << ".txt";
+	dataName << "datafile" << text[text.size() - 1]._number << ".txt";
 	std::string name;
 	dataName >>  name;
 	std::getline(std::cin, newMember._fullName);
@@ -123,7 +123,7 @@ void createDataFile(std::vector<Text> &text)
 				std::cout << "Enter full name: ";
 				break;
 			case 1:
-				std::cout << "Enter number of birth: ";
+				std::cout << "Enter day of birth: ";
 				break;
 			case 2:
 				std::cout << "Enter month of birth: ";
@@ -248,6 +248,7 @@ void letterOut(std::vector<Text> &text)
 	char letter;
 	std::cout << "Letter: ";
 	std::cin >> letter;
+	std::cout << "---------------------------------------" << std::endl;
 	for(auto i = 0; i < text.size(); ++i)
 	{
 		if((char)tolower(text[i]._fullName[0]) == tolower(letter))
@@ -255,6 +256,7 @@ void letterOut(std::vector<Text> &text)
 			text[i].out();	
 		}
 	}
+	std::cout << "---------------------------------------" << std::endl;
 }
 
 void sortAlphabet(std::vector<Text> &text)
@@ -286,7 +288,7 @@ Text& Text::enterData()
 	std::cout << "Enter full name: ";
 	std::getline(std::cin, _fullName);
 	std::getline(std::cin, _fullName);
-	std::cout << "Enter number of birth: ";
+	std::cout << "Enter day of birth: ";
 	std::getline(std::cin, _numberBirth);
 	std::cout << "Enter month of birth: ";
 	std::getline(std::cin, _monthBirth);

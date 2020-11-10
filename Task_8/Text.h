@@ -20,6 +20,7 @@ class Text{
 		Text();
 		Text& enterData();
 		Text& out();
+		friend void Menu(std::vector<Text> &text);
 		friend void setDataFile(std::vector<Text> &text);
 		friend void createDataFile(std::vector<Text> &text);
 		friend void monthBirth(std::vector<Text> &text);

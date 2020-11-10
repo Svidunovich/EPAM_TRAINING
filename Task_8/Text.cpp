@@ -2,17 +2,16 @@
 
 int Text::id = 0;
 
-/*
 void Menu(std::vector<Text> &text)
 {
 	std::cout << "1 - Download data from file" << std::endl;
 	std::cout << "2 - Enter data" << std::endl;
-	std::cout << "3 - Add data" << std::endl;
+	std::cout << "3 - Add data on file" << std::endl;
 	std::cout << "4 - Sort database by alphabet" << std::endl;
 	std::cout << "5 - Sort database by age" << std::endl;
 	std::cout << "6 - Output: list of people, born on given month" << std::endl;
 	std::cout << "7 - Output: last name oldest peolpe" << std::endl;
-	std::cout << "8 - Output: Whole last name, beginning by given letter" << std::endl;
+	std::cout << "8 - Output: all surnames, starting with a given letter" << std::endl;
 	std::cout << "0 - Exit program" << std::endl;
 	int i;
 	std::cout << "Enter your choise: ";
@@ -21,45 +20,45 @@ void Menu(std::vector<Text> &text)
 	{
 		case 1:
 			setDataFile(text);
-			return Menu(text);
+			std::cout << std::endl;
 			break;
 		case 2:
 			enterNewMember(text);		
-			return Menu(text);
+			std::cout << std::endl;
 			break;
 		case 3:
-			setDataFile(text);
-			return Menu(text);
+			createDataFile(text);
+			std::cout << std::endl;
 			break;
 		case 4:
 			sortAlphabet(text);
-			return Menu(text);
+			std::cout << std::endl;
 			break;
 		case 5:
 			sortAge(text);
-			return Menu(text);
+			std::cout << std::endl;
 			break;
 		case 6:
 			monthBirth(text);
-			return Menu(text);
+			std::cout << std::endl;
 			break;
 		case 7:
 			findOld(text);
-			return Menu(text);
+			std::cout << std::endl;
 			break;
 		case 8:
 			letterOut(text);
-			return Menu(text);
+			std::cout << std::endl;
 			break;
 		case 0:
 			return;
 			break;
 		default:
-			return Menu(text);
+			std::cout << std::endl;
 			break;		
 	}
+	return Menu(text);
 }
-*/
 
 bool fexists(std::string str)
 {
@@ -146,7 +145,7 @@ void createDataFile(std::vector<Text> &text)
 void monthBirth(std::vector<Text> &text)
 {
 	std::string month;
-	std::cout << "Enter month: " << std::endl;
+	std::cout << "Enter month: ";
 	std::getline(std::cin, month);
 	std::getline(std::cin, month);
 	std::cout << "Born at this month: " << std::endl;

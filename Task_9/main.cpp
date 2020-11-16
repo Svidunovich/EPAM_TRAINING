@@ -44,8 +44,7 @@ int main()
 	{
 		v.push(i);
 	}
-	std::cout << v[2] << std::endl;
-	for(int i = 0; i < v.size(); i++)
+	for(size_t i = 0; i < v.size(); i++)
 	{
 		std::cout << v[i] << "   ";
 	}
@@ -53,7 +52,7 @@ int main()
 	auto out = [&v]()
 	{
 		auto size = v.size();
-		for(int i = 0; i < size; ++i)
+		for(size_t i = 0; i < size; ++i)
 		{
 			std::cout << v.front() << std::endl;
 			v.pop();

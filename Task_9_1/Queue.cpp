@@ -17,6 +17,7 @@ Queue<T>::~Queue()
 		delete temp;
 		_size--;
 	}
+	delete this->head;
 }
 
 template <typename T>

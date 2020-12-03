@@ -1,12 +1,18 @@
 #pragma once
 #include <iostream>
 #include <algorithm>
+#include <queue>
+#include <set>
+#include <random>
+#include <functional>
+#include <chrono>
 
 template <typename T>
-class Queue
+class Queue // : std::queue<T>
 {
 	public:
 		Queue();
+		// Queue(const Queue &copy);
 		~Queue();
 		void push(T data);
 		size_t size();
@@ -14,6 +20,9 @@ class Queue
 		T front();
 		T back();
 		bool empty();
+		T find(const T& val);
+		void sort();
+		//auto find(const T& val);
 	private:
 		struct Node{
 			T data;

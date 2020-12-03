@@ -4,10 +4,10 @@
 
 class File
 {
-	private:
+	public:
 		File();
 		File(const char* filename);
 		~File();
-	public:
+	private:
 		std::fstream _file;
 };

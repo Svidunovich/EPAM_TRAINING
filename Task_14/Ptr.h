@@ -10,6 +10,8 @@ class Ptr
 		Ptr(Ptr& a);
 		~Ptr();
 		Ptr<T>& operator=(Ptr& a);
+		Ptr(const Ptr<T>& copy) = delete;
+		Ptr& operator=(const Ptr<T>& copy) = delete;
 		T* operator->();
 		T& operator*();
 	private:

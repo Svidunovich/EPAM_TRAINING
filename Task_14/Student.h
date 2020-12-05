@@ -23,6 +23,14 @@ class Student
 					return (x._age < y._age);
 			}
 		};
+		struct ageGreaterPtr
+		{
+			bool operator()(std::unique_ptr<Student>& x, std::unique_ptr<Student>& y) const
+			{
+					return (x->_age < y->_age);
+			}
+		};
+
 		struct courseGreater
 		{
 			bool operator()(const Student& x, const Student& y) const

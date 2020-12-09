@@ -108,10 +108,10 @@ template <typename T>
 T Queue<T>::find(const T& val)
 {
 	Node *current = this->head;
-	for(size_t i = 0; i < this->_size - 1; i++)
+	for(size_t i = 0; i < this->_size; i++)
 	{
-		current = current->next;
 		if(current->data == val) { return current->data; };
+		current = current->next;
 	}
 	return 0;
 }

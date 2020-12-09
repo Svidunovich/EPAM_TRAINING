@@ -19,7 +19,7 @@ test_suite* init_unit_test_suite( int , char* [] )
 */
 
 
-BOOST_AUTO_TEST_CASE( test )
+BOOST_AUTO_TEST_CASE( testOne )
 {
 	Queue<int> q;
 	q.push(1);
@@ -33,4 +33,10 @@ BOOST_AUTO_TEST_CASE( test )
 	BOOST_CHECK( q.empty() == true );
 	q.pop();
 	BOOST_CHECK( q.empty() == true );
+}
+
+BOOST_AUTO_TEST_CASE( testTwo )
+{
+	Queue<int> q;
+	BOOST_CHECK( q.empty() == false );
 }
